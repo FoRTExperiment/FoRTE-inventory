@@ -10,9 +10,9 @@ library(lubridate)
 
 # Read the inventory data file
 cat("Reading the inventory data file...\n")
-trees <- read_csv("data-inventory/dummy_inventory.csv", col_types = "ccccdcTc")
+trees <- read_csv("data/dummy_inventory.csv", col_types = "ccccdcTc")
 cat("Merging with the plot-subplot design file...\n")
-read_csv("design/plot-subplot.csv", col_types = "ccdddcic") %>% 
+read_csv("data/plot-subplot.csv", col_types = "cccdddcic") %>% 
   left_join(trees, ., by = "Subplot") ->
   inventory
 
