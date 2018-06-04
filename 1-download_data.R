@@ -13,8 +13,8 @@ for(f in files$name) {
   drive_download(f, path = file.path("./data", files$name), overwrite = TRUE)
 }
 
-cat("Downloading plot-subplot information...\n")
-x <- as_id("https://drive.google.com/open?id=1kZhBJBViSs0udcr-ZlxtBZmDp0z2T4cF")
+cat("Downloading plot-subplot Google Sheet as CSV...\n")
+x <- as_id("https://docs.google.com/spreadsheets/d/1W7pPSfwHzqeY1akbBbK3M3NzuprWwQ8Pdpg-6QqLe5A/edit?usp=sharing")
 drive_download(x, path = "./data/plot-subplot.csv", overwrite = TRUE)
 
 cat("All done.\n")
